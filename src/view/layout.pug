@@ -1,0 +1,29 @@
+mixin link(href, name)
+  h1.title
+    a(href=href)= name
+
+mixin nav-link(href, name)
+  li
+    a(href=href)= name
+  
+
+doctype html
+head
+  include includes/head.pug
+body
+  .container
+    header.top
+      +link('/', 'parkingspace')
+      +link('/about', 'about')
+
+
+    nav.bottom-nav
+      ul
+        +nav-link('/name-card-2020', 'name card')
+        +nav-link('/asterisk-emitter', 'asterisk_emitter')
+        +nav-link('/imsibogwanham-2020', '임시보관함')
+        +nav-link('/perfect-circle-2019', '완벽한 동그라미를 그리는 법')
+        +nav-link('/tmmg-2017', '타오르지 못하고 명멸하는 것들에 관하여')
+
+    .right-display
+      block right-display

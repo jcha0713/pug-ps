@@ -1,0 +1,18 @@
+extends layout.pug
+
+mixin video(src)
+  video(width='350px', autoplay, autobuffer, playslinline, loop, muted)
+    source(src=src, type='video/mp4')
+
+block right-display
+  img(src='/img/asterisk_emitter.png').asterisk-blue
+  .asterisk-video
+    +video('asterisk_emitter1.mp4')
+    +video('asterisk_emitter2.mp4')
+  hr
+  p asterisk_emitter는 Spark AR을 통해 제작한 인스타그램 전용 AR 이펙트입니다.
+  p
+    a(href='https://www.instagram.com/parkingspace.me')  @parkingspace.me
+    .
+      를 방문하시면 누구나 사용해볼 수 있습니다.
+  br
